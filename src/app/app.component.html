@@ -1,0 +1,34 @@
+<div class="cntainer-fluid">
+  <h1><mark>............. 2 way data bindding using model.............</mark></h1>
+  <div class="form-group">
+    <label>name:--</label>
+    <input type="text" class="form-control" [(ngModel)]="userinfo.name">
+  </div>
+  <div class="form-group">
+    <label>location :-</label>
+    <input type="text" class="form-control" [(ngModel)]="userinfo.location">
+  </div>
+  <div class="form-group">
+    <label>age :-</label>
+    <input type="text" class="form-control" [(ngModel)]="userinfo.age">
+  </div>
+  <hr>
+  <h2><mark>here we show value of the abover form in the table format</mark></h2>
+  <table class="table  table-striped table-bordered table-hover  ">
+    <thead>
+      <tr [ngClass]="'a'">
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>LOCATION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngStyle]="{'background-color':'green' , 'fontFamily': 'cooper' }">
+        <td>{{userinfo.name}}</td>
+        <td>{{userinfo.age}}</td>
+        <td>{{userinfo.location}}</td>
+      </tr>
+    </tbody>
+  </table>
+  value:- roll is:{{userinfo.name}} and location is :- {{userinfo.location}} and age is :- {{userinfo.age}}
+<hr>
